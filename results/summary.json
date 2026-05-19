@@ -1,0 +1,47 @@
+{
+  "count": 3610,
+  "config": {
+    "dataset": "nq_open",
+    "source": "ehsk/OpenQA-eval via NQ_FiD gold rows",
+    "split": "test",
+    "start": 0,
+    "limit": null,
+    "index_dir": "/root/rag-evaluation/result/crag_topic_rag/topic_index",
+    "topic_info_path": "/root/rag-evaluation/result/crag_topic_rag/topic_partition/topic_info_40.csv",
+    "top_k": 5,
+    "fallback_top_k": 5,
+    "router_top_topics": 5,
+    "router_max_knowledge_points": 6,
+    "router_max_keywords": 12,
+    "topic_partitioning": true,
+    "crag": true,
+    "crag_pipeline": "official_adapted_topic_partition_fullwiki_fallback",
+    "evaluator_path": null,
+    "evaluator_type": "embedding_fallback",
+    "upper_threshold": 0.6,
+    "lower_threshold": 0.45,
+    "decompose_mode": "selection",
+    "internal_top_n": 3,
+    "external_top_n": 5,
+    "model_name": "gemma2:2b",
+    "embedding_model": "all-MiniLM-L6-v2"
+  },
+  "metrics": {
+    "EM": 0.22548476454293628,
+    "Acc": 0.3155124653739612,
+    "F1": 0.29904351746650343
+  },
+  "metrics_by_question_type": {
+    "unknown": {
+      "count": 3610,
+      "EM": 0.22548476454293628,
+      "Acc": 0.3155124653739612,
+      "F1": 0.29904351746650343
+    }
+  },
+  "crag": {
+    "correct": 940,
+    "ambiguous": 1136,
+    "incorrect": 1534
+  }
+}
